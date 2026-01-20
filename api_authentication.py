@@ -1,11 +1,3 @@
-"""
-API Key = like the personal number or password
-This is the way how the API provider can track how much you're using their API
-and to authorize your access and deny your access once you've gone over the limit.
-
-Different API providers tend to have different was that you can authenticate with them
-
-"""
 import requests
 from twilio.rest import Client
 import os
@@ -46,17 +38,4 @@ if will_sunny:
         to="+421944365972",
     )
     print(message.status)
-
-
-"""
-Environment variables = terminal (git bash) -> env = whole bunch of variables 
-= system-level variables used to store configuration values outside of source code (passwords, API key,..)
-it's used for security, configuration and convenience
-use: with library os 
-1. import os
-2. (terminal bash) export OWM_API_KEY="value"
-3. (15. row) API_key = os.environ.get("OWM_API_KEY")
-4. (terminal bash) python api_authentication.py 
-
-
-"""
+    
